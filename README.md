@@ -1,3 +1,3 @@
-# CMSC
+# CMSC: Collaborative Multi-Domain Sentiment Classification
 A matlab implementation of the collaborative multi-domain sentiment classification algorithm.
 
