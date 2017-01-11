@@ -93,7 +93,7 @@ This source code is designed to implement the collaborative multi-domain sentime
 
 >>**S**:    a M*M vector, represents the domain similarities. S(m,n) represents the domain similarity between domain m and domain n.
 
->>**alpha1**:  a non-negative real value, controls the relative importance of the prior general sentiment knowledge extracted from general purpose sentiment lexicons.
+>>**alpha1**:  a non-negative real value, controls the relative importance of the prior general sentiment knowledge extracted from general-purpose sentiment lexicons.
 
 >>**alpha2**:  a non-negative real value, controls the relative importance of the domain-specific sentiment knowledge extracted from both labeled and unlabeled samples.
 
@@ -103,7 +103,7 @@ This source code is designed to implement the collaborative multi-domain sentime
 
 >>**lambda2**:  a non-negative real value, controls the model sparsity.
 
->>**loss_type**:  a string, represents the loss function used in our approach.
+>>**loss_type**:  a string, represents the type of loss function used in our approach.
 
 >+ Output
 
@@ -111,6 +111,8 @@ This source code is designed to implement the collaborative multi-domain sentime
 
 >>**W**: a N*D matrix, represents the domain-specific sentiment models of multiple domains, where W(:,m) is the domain-specific sentiment model of domain m. 
 
+
+If you have any questions or suggestions on using these source codes, welcome to contact us at wfz12@mails.tsinghua.edu.cn.
 
 #Citation
 
