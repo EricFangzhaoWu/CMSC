@@ -116,7 +116,7 @@ If you have any questions or suggestions on using these source codes, welcome to
 
 #Citation
 
-If you use this package and like it, welcome to cite this manuscript:
+If you use this package and like it, welcome to cite our manuscript:
 
 [1] Fangzhao Wu, Zhigang Yuan, and Yongfeng Huang. Collaboratively Training Sentiment Classifiers for Multiple Domains. IEEE Transactions on Knowledge and Data Engineering, under review.
 
