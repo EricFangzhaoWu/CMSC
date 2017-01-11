@@ -9,7 +9,7 @@ This source code is designed to implement the collaborative multi-domain sentime
 
 #Usage
 
-###1.DSSKE.m
+###1. DSSKE.m
 
 >	function [p_m] = DSSKE(X, y, C, theta)
 
@@ -31,7 +31,7 @@ This source code is designed to implement the collaborative multi-domain sentime
 
 >>**p_m**:   a D*1 vector, represents the domain-specific sentiment word distribution learned by the algorithm.
 
-###2.CMSC.m
+###2. CMSC.m
 
 >	function [w, W] = CMSC(X, y, domain, p, P, S, alpha1, alpha2, beta, lambda1, lambda2, loss_type) 
 
