@@ -22,7 +22,7 @@ This source code is designed to implement the collaborative multi-domain sentime
 
 >>**X**:  a N*D matrix, represents the feature vectors of labeled samples from multiple domains, where N is the number of all labeled samples and D is the dimension of the feature vector.
 
->>**y**:   a N*1 vector, represents the sentiment labele of each labeled sample, where +1 for positive sample and -1 for negative sample.
+>>**y**:   a N*1 vector, represents the sentiment labels of these labeled samples, where +1 for positive sample and -1 for negative sample.
 
 >>**domain**:   a N*1 vector, represents the domain index of each labeled sample.
 
