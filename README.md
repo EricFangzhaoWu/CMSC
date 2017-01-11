@@ -9,11 +9,12 @@ This source code is designed to implement the collaborative multi-domain sentime
 
 #Usage
 
-1. DSSKE.m
+###1.DSSKE.m
 
->	function p_m = DSSKE(X, y, C, theta)
+>	function [p_m] = DSSKE(X, y, C, theta)
 
 >+ Function Description
+
 >>The goal of this function is to extract domain-specific sentiment knowledge, i.e., the domain-specific sentiment word distributions from both labeled samples and the contextual similarities mined from massive unlabeled samples. This function contains two major steps. First, extract the initial sentiment word distributions from labeled samples using PMI. Second, propagate the initial sentiment word distributions along the contextual similarities to compute the final domain-specific sentiment word distributions.
 
 >+ Input
@@ -30,7 +31,7 @@ This source code is designed to implement the collaborative multi-domain sentime
 
 >>**p_m**:   a D*1 vector, represents the domain-specific sentiment word distribution learned by the algorithm.
 
-2. CMSC.m
+###2.CMSC.m
 
 >	function [w, W] = CMSC(X, y, domain, p, P, S, alpha1, alpha2, beta, lambda1, lambda2, loss_type) 
 
