@@ -4,7 +4,7 @@ A matlab implementation of the collaborative multi-domain sentiment classificati
 
 #Introduction
 
-This source code is designed to implement the collaborative multi-domain sentiment classification approach (CMSC) proposed in reference [1]. The aim of CMSC approach is to train domain-specific sentiment classifiers for multiple domains simultaneously in a collaborative way. The sentiment information in different domains is shared to train more accurate and robust sentiment classifiers for each domain when labeled data in these domains is scarce. In CMSC approach, the sentiment classifier of each domain is decomposed into two components, a global one and a domain-specific one. The global model can capture the general sentiment knowledge and is shared by various domains. The domain-specific model can capture the specific sentiment expressions in each domain. CMSC also incorporates the domain-specific sentiment knowledge mined from both labeled and unlabeled samples in each domain to enhance the learning of domain-specific sentiment classifiers. Besides, the similarities between different domains are incorporated into CMSC approach as regularization over the domain-specific sentiment classifiers to encourage the sharing of sentiment information between similar domains.
+This source code is designed to implement the collaborative multi-domain sentiment classification approach (CMSC) proposed in reference [1]. The aim of CMSC approach is to train domain-specific sentiment classifiers for multiple domains simultaneously in a collaborative way. The sentiment information in different domains is shared with each other to train more accurate and robust sentiment classifiers for these domains when labeled data is scarce. In CMSC approach, the sentiment classifier of each domain is decomposed into two components, a global one and a domain-specific one. The global model can capture the general sentiment knowledge and is shared by various domains. The domain-specific model can capture the specific sentiment expressions in each domain. CMSC also incorporates the domain-specific sentiment knowledge mined from both labeled and unlabeled samples in each domain to enhance the learning of domain-specific sentiment classifiers. Besides, the similarities between different domains are incorporated into CMSC approach as regularization over the domain-specific sentiment classifiers to encourage the sharing of sentiment information between similar domains.
 
 
 #Usage
@@ -15,13 +15,13 @@ This source code is designed to implement the collaborative multi-domain sentime
 
 >+ Function Description
 
->>The goal of this function is to extract domain-specific sentiment knowledge, i.e., the domain-specific sentiment word distributions from both labeled samples and the contextual similarities mined from massive unlabeled samples. This function contains two major steps. First, extract the initial sentiment word distributions from labeled samples using PMI. Second, propagate the initial sentiment word distributions along the contextual similarities to compute the final domain-specific sentiment word distributions.
+>>The goal of this function is to extract domain-specific sentiment knowledge, i.e., the domain-specific sentiment word distributions, from both labeled samples and the contextual similarities mined from massive unlabeled samples. This function contains two major steps. First, extract the initial sentiment word distributions from labeled samples using PMI. Second, propagate the initial sentiment word distributions along the contextual similarities to compute the final domain-specific sentiment word distributions.
 
 >+ Input
 
 >>**X**:   a N*D matrix, represents the feature vectors of labeled samples in a specific domain, where N is the number of labeled samples and D is the dimension of feature vector.
 
->>**y**:   a N*1 vector, represents the sentiment labels of these labeled samples, where +1 for positive sample and -1 for negative sample.
+>>**y**:   a N*1 vector, represents the sentiment labels of these labeled samples, where +1 for positive samples and -1 for negative samples.
 
 >>**C**:   a D*D vector, represents the contextual similarities among features mined from massive unlabeled samples.
 
@@ -77,13 +77,13 @@ This source code is designed to implement the collaborative multi-domain sentime
 
 >+ Function Description
 
->>The goal of this function is to train a robust global sentiment classifier across multiple domains and an accurate domain-specific sentiment classifier for each domain when a small number of labeled samples in these domains,  the domain similarities between them, the general sentiment knowledge extracted from general-purpose sentiment lexicons, and the domain-specific sentiment knowledge of each domain extracted from both labeled and unlabeled samples.
+>>The goal of this function is to train domain-specific sentiment classifiers for multiple domains in a collaborative way by exploiting the common sentiment knowledge shared among them. Given a small number of labeled samples in multiple domains, the domain similarities between these domains, the general sentiment knowledge extracted from general-purpose sentiment lexicons, and the domain-specific sentiment knowledge of each domain extracted from both labeled and unlabeled samples, this function will learn a global sentiment model shared by all domains to capture the general sentiment knowlege and a domain-specific sentiment model for each domain to capture the domain-specific sentiment expressions. The final domain-specific sentiment classifier of each domain is the combination of the global sentiment model and their domain-specific sentiment model. 
 
 >+ Input
 
 >>**X**:  a N*D matrix, represents the feature vectors of labeled samples from multiple domains, where N is the number of all labeled samples and D is the dimension of the feature vector.
 
->>**y**:   a N*1 vector, represents the sentiment labels of these labeled samples, where +1 for positive sample and -1 for negative sample.
+>>**y**:   a N*1 vector, represents the sentiment labels of these labeled samples, where +1 for positive samples and -1 for negative samples.
 
 >>**domain**:   a N*1 vector, represents the domain index of each labeled sample.
 
