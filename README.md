@@ -31,7 +31,27 @@ This source code is designed to implement the collaborative multi-domain sentime
 
 >>**p_m**:   a D*1 vector, represents the domain-specific sentiment word distribution learned by the algorithm.
 
-###2. CMSC.m
+
+###2. computeContentBasedDomainSimilarity.m
+
+>	function [similarity] = computeContentBasedDomainSimilarity(X_m, X_n)
+
+>+ Function Description
+
+>>The goal of this function is to compute the domain similarity between two domains based on their textual term distributions according to Jensen-Shannon divergence. 
+
+>+ Input
+
+>>**X_m**:   a N_m*D matrix, represents the feature vectors of both labeled and unlabeled samples in domain m, where N_m is the number of samples in domain m and D is the dimension of feature vector.
+
+>>**X_n**:   a N_n*D matrix, represents the feature vectors of both labeled and unlabeled samples in domain n, where N_n is the number of samples in domain n.
+
+>+ Output
+
+>>**similarity**:   a real value, represents the domain similarity between domains m and n based on their textual term distributions.
+
+
+###4. CMSC.m
 
 >	function [w, W] = CMSC(X, y, domain, p, P, S, alpha1, alpha2, beta, lambda1, lambda2, loss_type) 
 
